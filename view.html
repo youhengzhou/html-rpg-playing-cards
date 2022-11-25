@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #title {
+            margin: auto;
+            width: 50%;
+            border: 3px solid #2196f3;
+            padding: 10px;
+            text-align: center;
+            color: #e6571f;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .card {
+            position: absolute;
+            z-index: 9;
+            background-color: #f1f1f1;
+            text-align: center;
+            border: 1px solid #d3d3d3;
+        }
+
+        .cardheader {
+            padding: 10px;
+            cursor: move;
+            z-index: 10;
+            background-color: #2196f3;
+            color: #fff;
+        }
+    </style>
+    <body>
+        <h1 id="title">RPG Cards</h1>
+
+        <div class="card">
+            <div class="cardheader">RPG Playing Card</div>
+            <table>
+                <tr>
+                    <td>Race:</th>
+                    <td class="race">Race</th>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td class="name">Name</td>
+                </tr>
+                <tr>
+                    <td>Hair Color:</td>
+                    <td class="hair">Hair Color</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+          <div class="cardheader">RPG Playing Card</div>
+          <table>
+              <tr>
+                  <td>Race:</th>
+                  <td class="race">Race</th>
+              </tr>
+              <tr>
+                  <td>Name:</td>
+                  <td class="name">Name</td>
+              </tr>
+              <tr>
+                  <td>Hair Color:</td>
+                  <td class="hair">Hair Color</td>
+              </tr>
+          </table>
+      </div>
+
+      <div class="card">
+        <div class="cardheader">RPG Playing Card</div>
+        <table>
+            <tr>
+                <td>Race:</th>
+                <td class="race">Race</th>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td class="name">Name</td>
+            </tr>
+            <tr>
+                <td>Hair Color:</td>
+                <td class="hair">Hair Color</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+      <div class="cardheader">RPG Playing Card</div>
+      <table>
+          <tr>
+              <td>Race:</th>
+              <td class="race">Race</th>
+          </tr>
+          <tr>
+              <td>Name:</td>
+              <td class="name">Name</td>
+          </tr>
+          <tr>
+              <td>Hair Color:</td>
+              <td class="hair">Hair Color</td>
+          </tr>
+      </table>
+  </div>
+
+        <script>
+            let highlanderNamesM = [
+                "Arne",
+                "Birger",
+                "Bjorn",
+                "Bo",
+                "Erik",
+                "Frode",
+                "Gorm",
+                "Halfdan",
+                "Harald",
+                "Harald",
+                "Knud",
+                "Kare",
+                "Leif",
+                "Njal",
+                "Roar",
+                "Rune",
+                "Sten",
+                "Skarde",
+                "Sune",
+                "Svend",
+                "Troels",
+                "Toke",
+                "Torsten",
+                "Trygve",
+                "Ulf",
+                "Odger",
+                "Age",
+
+                "Adalvald",
+                "Addvar",
+                "Addvild",
+                "Agmaer",
+                "Akar",
+                "Alding",
+                "Aldis",
+                "Alfarinn",
+                "Alvor",
+                "Andurs",
+                "Angrenor",
+                "Angvid",
+                "Argis",
+                "Arnbjorn",
+                "Arngeir",
+                "Arnskar",
+                "Arrald",
+                "Asbjorn",
+                "Asgeir",
+                "Aslfur",
+                "Assur",
+                "Atar",
+                "Aventus",
+                "Avulstein",
+                "Badnir",
+                "Balbus",
+                "Balgruuf",
+                "Balimund",
+                "Bassianus",
+                "Beirand",
+                "Belrand",
+                "Benkum",
+                "Benor",
+                "Bersi",
+                "Bjorlam",
+                "Bjornolfr",
+                "Bolgeir",
+                "Bolli",
+                "Bolund",
+                "Borgny",
+                "Borri",
+                "Borvir",
+                "Bottar",
+                "Briehl",
+                "Brill",
+                "Brond",
+                "Brunwulf",
+                "Brynjolf",
+                "Bulfrek",
+                "Calder",
+                "Christer",
+                "Dagur",
+                "Dengeir",
+                "Drahff",
+                "Drennen",
+                "Eimar",
+                "Einarth",
+                "Elgrim",
+                "Embry",
+                "Eorlund",
+                "Erik",
+                "Erikur",
+                "Erlendr",
+                "Esbern",
+                "Falk",
+                "Farengar",
+                "Farkas",
+                "Felldir",
+                "Fenrig",
+                "Filnjar",
+                "Frodnar",
+                "Frofnir",
+                "Froki",
+                "Frorkmar",
+                "Frothar",
+                "Galmar",
+                "Garthar",
+                "Garuk",
+                "Geimund",
+                "Geirlund",
+                "Gestur",
+                "Gissur",
+                "Gjak",
+                "Gjalund",
+                "Gjuk",
+                "Gloth",
+                "Golldir",
+                "Gonnar",
+                "Gorm",
+                "Gort",
+                "Gralnach",
+                "Gregor",
+                "Grimvar",
+                "Grisvar",
+                "Gunding",
+                "Gunmar",
+                "Gunnar",
+                "Guthrum",
+                "Hadring",
+                "Hadvar",
+                "Hafnar",
+                "Hajvarr",
+                "Hakar",
+                "Haknir",
+                "Hakon",
+                "Halvar",
+                "Haming",
+                "Hans",
+                "Hargar",
+                "Harkon",
+                "Harlaug",
+                "Harrald",
+                "Heddic",
+                "Heimskr",
+                "Heimvar",
+                "Helvard",
+                "Hemming",
+                "Henrik",
+                "Heratar",
+                "Hern",
+                "Hewnon",
+                "Hjalfar",
+                "Hjornskar",
+                "Hjorunn",
+                "Hod",
+                "Hofgrir",
+                "Hogni",
+                "Holgeir",
+                "Horgeir",
+                "Horik",
+                "Horm",
+                "Hreinn",
+                "Hroar",
+                "Hrodulf",
+                "Hroggar",
+                "Hrollod",
+                "Hrolmir",
+                "Hrongar",
+                "Hrothmund",
+                "Hugin",
+                "Hunroor",
+                "Idolaf",
+                "Igmund",
+                "Irlof",
+                "Irnskar",
+                "Istar",
+                "Jenssen",
+                "Jervar",
+                "Jesper",
+                "Jod",
+                "Jofthor",
+                "Jolf",
+                "Jon",
+                "Jorgen",
+                "Joric",
+                "Jorleif",
+                "Jorn",
+                "Jurgen",
+                "Kai",
+                "Karl",
+                "Kibell",
+                "Kjar",
+                "Kleppr",
+                "Klimmek",
+                "Knjakr",
+                "Knud",
+                "Kodlak",
+                "Kodrir",
+                "Korir",
+                "Kottir",
+                "Kraldar",
+                "Kust",
+                "Kvenel",
+                "Kyr",
+                "Lars",
+                "Leifur",
+                "Leigelf",
+                "Lemkil",
+                "Llewellyn",
+                "Lod",
+                "Lodi",
+                "Lodvar",
+                "Logrolf",
+                "Lokil",
+                "Lokir",
+                "Lond",
+                "Lorenz",
+                "Lortheim",
+                "Lund",
+                "Lygrleid",
+                "Lynoit",
+                "Majni",
+                "Markus",
+                "Mathies",
+                "Maul",
+                "Metilius",
+                "Mikael",
+                "Miraak",
+                "Molgrom",
+                "Mralki",
+                "Narfi",
+                "Nelkir",
+                "Niels",
+                "Nikulas",
+                "Nils",
+                "Odar",
+                "Odfel",
+                "Oengul",
+                "Ogmund",
+                "Olaf",
+                "Olfrid",
+                "Ollrod",
+                "Onmund",
+                "Orgnar",
+                "Orthjolf",
+                "Pactur",
+                "Raerek",
+                "Ragnar",
+                "Ralof",
+                "Ranmir",
+                "Rargal",
+                "Reves",
+                "Rhorlak",
+                "Rigel",
+                "Rissing",
+                "Rogen",
+                "Roggi",
+                "Roggvir",
+                "Rolff",
+                "Rorik",
+                "Rorlund",
+                "Rundi",
+                "Rustleif",
+                "Sabjorn",
+                "Saerlund",
+                "Sibbi",
+                "Siddgeir",
+                "Sifnar",
+                "Sigaar",
+                "Sigar",
+                "Sigurd",
+                "Sild",
+                "Sinding",
+                "Sinmir",
+                "Sirgar",
+                "Skaggi",
+                "Skald",
+                "Skeggr",
+                "Skjor",
+                "Skuli",
+                "Skulnar",
+                "Skulvar",
+                "Snilf",
+                "Snilling",
+                "Snorreid",
+                "Sogrlaf",
+                "Solaf",
+                "Stalf",
+                "Steirod",
+                "Stenvar",
+                "Stig",
+                "Styrr",
+                "Sulvar",
+                "Svaknir",
+                "Sven",
+                "Talsgar",
+                "Thadgeir",
+                "Thaer",
+                "Thalin",
+                "Thjollod",
+                "Thonar",
+                "Thongvor",
+                "Thonjolf",
+                "Thonnir",
+                "Thorald",
+                "Thorek",
+                "Thoring",
+                "Thorygg",
+                "Thorgar",
+                "Thrynn",
+                "Tolan",
+                "Tolfdir",
+                "Torbjorn",
+                "Torolf",
+                "Torsten",
+                "Torvar",
+                "Torygg",
+                "Trilf",
+                "Tsun",
+                "Tulvur",
+                "Ulfberth",
+                "Ulfgar",
+                "Ulfr",
+                "Ulfric",
+                "Unmid",
+                "Vald",
+                "Valdar",
+                "Valdimar",
+                "Valdr",
+                "Vanik",
+                "Vekel",
+                "Verner",
+                "Vidgrod",
+                "Viding",
+                "Vidrald",
+                "Vignar",
+                "Vilkas",
+                "Vilod",
+                "Vipir",
+                "Virkmund",
+                "Volk",
+                "Vorstag",
+                "Vulwulf",
+                "Wilhelm",
+                "Wilmuth",
+                "Wulfgar",
+                "Wuunferth",
+                "Yngvar",
+                "Yrsarald",
+            ];
+
+            let highlanderNamesF = [
+                "Astrid",
+                "Bodil",
+                "Frida",
+                "Gertrud",
+                "Gro",
+                "Estrid",
+                "Hilda",
+                "Gudrun",
+                "Gunhild",
+                "Helga",
+                "Inga",
+                "Liv",
+                "Randi",
+                "Signe",
+                "Sigrid",
+                "Revna",
+                "Sif",
+                "Tora",
+                "Tove",
+                "Thyra",
+                "Thurid",
+                "Ysra",
+                "Ulfhild",
+                "Ase",
+
+                "Abelone",
+                "Adisla",
+                "Aela",
+                "Aeri",
+                "Agna",
+                "Agni",
+                "Agnis",
+                "Alea",
+                "Alfhild",
+                "Alva",
+                "Alvide",
+                "Annekke",
+                "Angi",
+                "Anise",
+                "Anska",
+                "Argi",
+                "Ari",
+                "Asta",
+                "Astrid",
+                "Beitild",
+                "Bergritte",
+                "Betrid",
+                "Birna",
+                "Bjartur",
+                "Bodil",
+                "Bolfrida",
+                "Boti",
+                "Breya",
+                "Brina",
+                "Britte",
+                "Bryling",
+                "Dagny",
+                "Danica",
+                "Dorthe",
+                "Drifa",
+                "Edith",
+                "Eirid",
+                "Eisa",
+                "Elda",
+                "Elisif",
+                "Erdi",
+                "Eris",
+                "Evette",
+                "Faida",
+                "Fastred",
+                "Fjori",
+                "Fjola",
+                "Fjotra",
+                "Frabbi",
+                "Fralia",
+                "Freir",
+                "Frida",
+                "Fridrika",
+                "Fruki",
+                "Fura",
+                "Gerda",
+                "Gerdur",
+                "Gisli",
+                "Gormlaith",
+                "Grelka",
+                "Grelod",
+                "Greta",
+                "Grete",
+                "Gretta",
+                "Grosta",
+                "Gwendolyn",
+                "Haelga",
+                "Hafjorg",
+                "Hamal",
+                "Haran",
+                "Hefid",
+                "Helgi",
+                "Helgird",
+                "Hermir",
+                "Hert",
+                "Hestla",
+                "Hilde",
+                "Hillevi",
+                "Hjordis",
+                "Hoddreid",
+                "Hrefna",
+                "Hroki",
+                "Huki",
+                "Hulda",
+                "Iddra",
+                "Illdi",
+                "Inge",
+                "Ingjard",
+                "Ingrid",
+                "Ingun",
+                "Iona",
+                "Irgnir",
+                "Jala",
+                "Jora",
+                "Jordis",
+                "Katla",
+                "Katria",
+                "Laila",
+                "Lami",
+                "Lillith",
+                "Lisbet",
+                "Lydia",
+                "Lynly",
+                "Margret",
+                "Matlara",
+                "Maven",
+                "Minette",
+                "Mjoll",
+                "Narri",
+                "Nilsine",
+                "Njada",
+                "Nura",
+                "Olava",
+                "Olda",
+                "Olfina",
+                "Oriella",
+                "Orla",
+                "Rakel",
+                "Rigel",
+                "Rikke",
+                "Ruki",
+                "Runa",
+                "Sapphire",
+                "Serana",
+                "Sigrid",
+                "Silda",
+                "Sissel",
+                "Sofie",
+                "Sonir",
+                "Sorli",
+                "Susanna",
+                "Svana",
+                "Svari",
+                "Swanhvir",
+                "Sylgja",
+                "Tekla",
+                "Temba",
+                "Thaena",
+                "Threki",
+                "Tilde",
+                "Tilma",
+                "Tormir",
+                "Tova",
+                "Una",
+                "Uthgerd",
+                "Valerica",
+                "Vori",
+                "Ysolda",
+            ];
+
+            let highlanderLastNames = [
+                "Bristol",
+                "Brighton",
+                "Abbey",
+                "Greenwood",
+                "Brightspear",
+                "Darklance",
+                "Whitemountain",
+                "Palemountain",
+                "Goldmountain",
+                "Darkmountain",
+                "Brightpeak",
+                "Whitepeak",
+                "Brightmountain",
+                "Goldpeak",
+                "Darkpeak",
+                "Greenmountain",
+                "Greenpeak",
+                "Cole",
+                "Smith",
+                "Jack",
+                "Connor",
+                "Jones",
+                "Williams",
+                "Johnson",
+                "Brown",
+                "Taylor",
+                "Davies",
+                "Wilson",
+                "Evans",
+                "Thomas",
+                "Roberts",
+            ];
+
+            let lowlanderNamesM = [
+                "Lukas",
+                "Leon",
+                "Finn",
+                "Tobias",
+                "Jonas",
+                "Ben",
+                "Elias",
+                "Thomas",
+                "Noah",
+                "Felix",
+                "Jurgen",
+                "Karl",
+                "Stefan",
+                "Walter",
+                "Uwe",
+                "Hans",
+                "Klaus",
+                "Gunter",
+                "Johan",
+                "Johann",
+                "Wolfgang",
+                "Mozart",
+                "Sebastian",
+                "Bach",
+            ];
+            let lowlanderNamesF = [
+                "Emma",
+                "Anna",
+                "Julia",
+                "Leah",
+                "Hannah",
+                "Laura",
+                "Lena",
+                "Mia",
+                "Sofia",
+                "Lina",
+                "Mila",
+                "Ella",
+                "Ursula",
+                "Christina",
+                "Ilse",
+                "Ingrid",
+                "Petra",
+                "Monika",
+                "Gisela",
+                "Susanne",
+                "Elise",
+            ];
+
+            let lowlanderLastNames = [
+                "Muller",
+                "Schmidt",
+                "Schneider",
+                "Fischer",
+                "Weber",
+                "Meyer",
+                "Wagner",
+                "Becker",
+                "Schulz",
+                "Hoffmann",
+                "Schafer",
+                "Koch",
+                "Bauer",
+                "Richter",
+                "Klein",
+                "Wolf",
+                "Schroder",
+                "Wolfgang",
+                "Neumann",
+                "Schwarz",
+                "Zimmermann",
+                "Braun",
+                "Kruger",
+                "Hofmann",
+                "Hartmann",
+                "Lange",
+                "Schmitt",
+                "Werner",
+                "Schmitz",
+                "Krause",
+                "Bachman",
+                "Schumacher",
+                "Ludwig",
+                "Kraus",
+                "Keller",
+                "Friedrich",
+                "Lorenz",
+                "Baumann",
+                "Gunther",
+                "Keller",
+                "Hahn",
+                "Schubert",
+                "Albrecht",
+                "Schuster",
+                "Bohm",
+                "Kramer",
+                "Stein",
+                "Jaeger",
+                "Otto",
+                "Sommer",
+                "Heinrich",
+                "Brandt",
+                "Haas",
+            ];
+
+            let miditineNamesM = [
+                "Alberto",
+                "Alessio",
+                "Alessandro",
+                "Angelo",
+                "Anselmo",
+                "Antonio",
+                "Bruno",
+                "Bernardo",
+                "Carlo",
+                "Cristiano",
+                "Claudio",
+                "Damiano",
+                "Dario",
+                "Domenico",
+                "Enrico",
+                "Enzo",
+                "Eugenio",
+                "Ezio",
+                "Fabrizio",
+                "Filippo",
+                "Federico",
+                "Francesco",
+                "Franco",
+                "Flavio",
+                "Gaetano",
+                "Gennaro",
+                "Giorgio",
+                "Giuliano",
+                "Gregorio",
+                "Lorenzo",
+                "Marco",
+                "Mario",
+                "Martino",
+                "Massimo",
+                "Matteo",
+                "Maurizio",
+                "Mauro",
+                "Nevio",
+                "Norberto",
+                "Ottaviano",
+                "Paolo",
+                "Pietro",
+                "Riccardo",
+                "Roberto",
+                "Silvio",
+                "Stefano",
+                "Tommaso",
+                "Umberto",
+                "Valentino",
+                "Vincenzo",
+                "Vittorio",
+                "Achille",
+                "Aimone",
+                "Alceste",
+                "Alcide",
+                "Amilcare",
+                "Amintore",
+                "Annibale",
+                "Apollone",
+                "Aristotele",
+                "Ariodante",
+                "Astore",
+                "Baldassarre",
+                "Beppe",
+                "Carmine",
+                "Cesare",
+                "Clemente",
+                "Daniele",
+                "Dante",
+                "Davide",
+                "Emanuele",
+                "Ercole",
+                "Ettore",
+                "Felice",
+                "Gabriele",
+                "Gaspare",
+                "Gastone",
+                "Gentile",
+                "Giacobbe",
+                "Giosuè",
+                "Giuseppe",
+                "Leone",
+                "Marte",
+                "Melchiorre",
+                "Michele",
+                "Nataniele",
+                "Oddone",
+                "Ottone",
+                "Pasquale",
+                "Raffaele",
+                "Salomone",
+                "Salvatore",
+                "Samuele",
+                "Sante",
+                "Scipione",
+                "Simone",
+                "Ulisse",
+                "Vitale",
+                "Vittore",
+                "Dionigi",
+                "Gianni",
+                "Giovanni",
+                "Luigi",
+                "Nanni",
+                "Ranieri",
+            ];
+            let miditineNamesF = [
+                "Abby",
+                "Academia",
+                "Artemis",
+                "Acadalia",
+                "Dalia",
+                "Berlia",
+                "Branlia",
+                "Adela",
+                "Adalina",
+                "Adelina",
+                "Adeline",
+                "Adrienna",
+                "Adrienne",
+                "Adriana",
+                "Angela",
+                "Anita",
+                "Anna",
+                "Arianna",
+                "Aurora",
+                "Berta",
+                "Bettina",
+                "Carla",
+                "Corinna",
+                "Cristiana",
+                "Diana",
+                "Elena",
+                "Elisa",
+                "Eugenia",
+                "Fabrizia",
+                "Federica",
+                "Francesca",
+                "Gabriella",
+                "Gianna",
+                "Giovanna",
+                "Giuliana",
+                "Ilaria",
+                "Isabella",
+                "Lavinia",
+                "Loredana",
+                "Lucia",
+                "Lucrezia",
+                "Luisa",
+                "Maddalena",
+                "Maria",
+                "Martina",
+                "Massima",
+                "Nicoletta",
+                "Olivia",
+                "Ornella",
+                "Paola",
+                "Patrizia",
+                "Piera",
+                "Roberta",
+                "Sara",
+                "Simona",
+                "Silvia",
+                "Sofia",
+                "Stella",
+                "Teresa",
+                "Valentina",
+                "Vittoria",
+                "Viviana",
+                "Zarina",
+                "Zita",
+                "Adelaide",
+                "Adele",
+                "Agnese",
+                "Alice",
+                "Beatrice",
+                "Berenice",
+                "Geltrude",
+                "Irene",
+                "Matilde",
+                "Rachele",
+                "Venere",
+                "Vera",
+                "Violetta",
+                "Noemi",
+            ];
+
+            let miditineLastNames = [
+                "Bernardello",
+                "Vettorello",
+                "Iannuccillo",
+                "Bortoletto",
+                "Bernardino",
+                "Ravellino",
+                "Verdino",
+                "Mangione",
+                "Bellone",
+                "Capone",
+                "Pastene",
+                "Mantone",
+                "Vallone",
+                "Boccaccio",
+                "Terrazzo",
+                "Varasso",
+                "Rumium",
+                "Latium",
+                "Grecium",
+                "Venetium",
+                "Siclium",
+                "Lombardium",
+                "Piemontium",
+                "Salmoiraghium",
+                "Ornaghium",
+                "Vernengoium",
+                "Martinengoium",
+                "Giordanengoium",
+                "Lambertenghium",
+                "Lamborghinium",
+                "Afrium",
+                "Manticoloium",
+                "Coloium",
+                "Friulium",
+                "Tuscanium",
+                "Sardinium",
+                "Calabrium",
+                "Campanium",
+                "Abruzzoium",
+            ];
+
+            let hanNamesM = [
+                "Good",
+                "Great",
+                "Everlasting",
+                "Splendor",
+                "War",
+                "Archer",
+                "Brick",
+                "Up",
+                "Arrow",
+                "Sword",
+                "Shield",
+                "Knight",
+                "King",
+                "Horse",
+                "Dragon",
+                "Red",
+                "Fire",
+                "Smith",
+                "White",
+                "Blue",
+                "Black",
+                "Ember",
+                "Light",
+                "Dark",
+                "Emblem",
+                "Eagle",
+                "Bridge",
+                "Bird",
+                "Wind",
+                "Cloud",
+                "Rain",
+                "Snow",
+                "Storm",
+                "Lightning",
+                "Thunder",
+                "Fly",
+                "Bolt",
+                "Chair",
+                "House",
+                "Bastion",
+                "Tower",
+                "Advisor",
+                "Intelligent",
+                "Wise",
+                "Strong",
+                "Brave",
+                "Fierce",
+                "Powerful",
+                "Genius",
+                "Handsome",
+                "Butcher",
+                "Warrior",
+                "Iron",
+            ];
+
+            let hanNamesF = [
+                "Good",
+                "Great",
+                "Everlasting",
+                "Splendor",
+                "Beautiful",
+                "Flower",
+                "White",
+                "Red",
+                "Blue",
+                "Black",
+                "Ember",
+                "Light",
+                "Intelligent",
+                "Silk",
+                "Rain",
+                "Snow",
+                "Rose",
+                "Bird",
+                "Quick",
+                "Wind",
+                "Cloud",
+                "Joy",
+                "Love",
+                "Peace",
+                "Happiness",
+                "Smile",
+                "Relax",
+            ];
+
+            let hanLastNames = [
+                "Wang",
+                "Ming",
+                "Luo",
+                "Lee",
+                "Zhou",
+                "Chan",
+                "Tian",
+                "Han",
+                "Gang",
+                "Bing",
+                "Long",
+                "Lao",
+                "Liu",
+                "Ma",
+                "Hong",
+                "Bo",
+                "Yang",
+                "Jin",
+                "Min",
+                "Ning",
+                "Wei",
+                "Chao",
+                "Su",
+                "Tang",
+            ];
+
+            let nameGen = (firstNames, lastNames) => {
+                let index = Math.floor(Math.random() * firstNames.length);
+                let nameString = "";
+                nameString += firstNames[index];
+                nameString += " ";
+                index = Math.floor(Math.random() * lastNames.length);
+                nameString += lastNames[index];
+                return nameString;
+            };
+
+            let weightedRandom = (data, weights) => {
+                let totalWeight = 0;
+                for (let w of weights) {
+                    totalWeight += w;
+                }
+
+                let random = Math.floor(Math.random() * totalWeight);
+
+                for (let i = 0; i < data.length; i++) {
+                    random -= weights[i];
+                    if (random < 0) {
+                        return data[i];
+                    }
+                }
+            };
+
+            let highlanderColorGen = () => {
+                let hair = ["white", "blonde", "red", "brown", "black"];
+                let weight = [80, 15, 0, 4, 1];
+                let color = weightedRandom(hair, weight);
+                return color;
+            };
+
+            let lowlanderColorGen = () => {
+                let hair = ["white", "blonde", "red", "brown", "black"];
+                let weight = [0, 20, 20, 20, 20];
+                let color = weightedRandom(hair, weight);
+                return color;
+            };
+
+            let miditineColorGen = () => {
+                let hair = ["white", "blonde", "red", "brown", "black"];
+                let weight = [0, 10, 10, 70, 10];
+                let color = weightedRandom(hair, weight);
+                return color;
+            };
+
+            let hanColorGen = () => {
+                let hair = ["white", "blonde", "red", "brown", "black"];
+                let weight = [0, 0, 2, 18, 80];
+                let color = weightedRandom(hair, weight);
+                return color;
+            };
+
+            let races = () => {
+                let races = ["highlander", "lowlander", "miditine", "han"];
+                let weight = [1, 1, 1, 1];
+                let race = weightedRandom(races, weight);
+                return race;
+            };
+
+            let names = () => {
+                let highlanderNameM = nameGen(
+                    highlanderNamesM,
+                    highlanderLastNames
+                );
+                let lowlanderNameM = nameGen(
+                    lowlanderNamesM,
+                    lowlanderLastNames
+                );
+                let miditineNameM = nameGen(miditineNamesM, miditineLastNames);
+                let hanNameM = nameGen(hanNamesM, hanLastNames);
+
+                let highlanderNameF = nameGen(
+                    highlanderNamesF,
+                    highlanderLastNames
+                );
+                let lowlanderNameF = nameGen(
+                    lowlanderNamesF,
+                    lowlanderLastNames
+                );
+                let miditineNameF = nameGen(miditineNamesF, miditineLastNames);
+                let hanNameF = nameGen(hanNamesF, hanLastNames);
+
+                charNames = {
+                    male: {
+                        highlander: highlanderNameM,
+                        lowlander: lowlanderNameM,
+                        miditine: miditineNameM,
+                        han: hanNameM,
+                    },
+                    female: {
+                        highlander: highlanderNameF,
+                        lowlander: lowlanderNameF,
+                        miditine: miditineNameF,
+                        han: hanNameF,
+                    },
+                };
+
+                return charNames;
+            };
+
+            let colors = () => {
+                let highlanderColor = highlanderColorGen();
+                let lowlanderColor = lowlanderColorGen();
+                let miditineColor = miditineColorGen();
+                let hanColor = hanColorGen();
+
+                charColors = {
+                    highlander: highlanderColor,
+                    lowlander: lowlanderColor,
+                    miditine: miditineColor,
+                    han: hanColor,
+                };
+
+                return charColors;
+            };
+
+            let raceList = document.getElementsByClassName("race");
+            let nameList = document.getElementsByClassName("name");
+            let colorList = document.getElementsByClassName("hair");
+
+            for (let i = 0; i < raceList.length; i++) {
+                let raceName = races();
+                raceList[i].innerHTML = raceName;
+                nameList[i].innerHTML = names()["male"][raceName];
+                colorList[i].innerHTML = colors()[raceName];
+            }
+
+            //Make the DIV element draggagle:
+            let cardList = document.getElementsByClassName("card");
+
+            for (let i = 0; i < raceList.length; i++) {
+                dragElement(cardList[i]);
+            }
+
+            function dragElement(elmnt) {
+                var pos1 = 0,
+                    pos2 = 0,
+                    pos3 = 0,
+                    pos4 = 0;
+                if (document.getElementById(elmnt.id + "header")) {
+                    /* if present, the header is where you move the DIV from:*/
+                    document.getElementById(elmnt.id + "header").onmousedown =
+                        dragMouseDown;
+                } else {
+                    /* otherwise, move the DIV from anywhere inside the DIV:*/
+                    elmnt.onmousedown = dragMouseDown;
+                }
+
+                function dragMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new position:
+                    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+                    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+                }
+
+                function closeDragElement() {
+                    /* stop moving when mouse button is released:*/
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            }
+        </script>
+    </body>
+</html>
